@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LoginApp
 {
-    public partial class Login : Form
+    public partial class Password : Form
     {
-        public Login()
+        public Password()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace LoginApp
 
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

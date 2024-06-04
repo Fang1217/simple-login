@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace LoginApp
 {
-    public partial class Login : Form
+    public partial class mainPage : Form
     {
-        public Login()
+        public mainPage()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
