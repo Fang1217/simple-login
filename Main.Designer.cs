@@ -1,6 +1,6 @@
 ﻿namespace LoginApp
 {
-    partial class mainPage
+    partial class MainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,39 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ChangePassword = new System.Windows.Forms.Button();
+            this.LogOut = new System.Windows.Forms.Button();
             this.loginHistory = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loginHistory)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // ChangePassword
             // 
-            this.button1.Location = new System.Drawing.Point(593, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Change Password";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.ChangePassword.Location = new System.Drawing.Point(228, 12);
+            this.ChangePassword.Name = "ChangePassword";
+            this.ChangePassword.Size = new System.Drawing.Size(114, 23);
+            this.ChangePassword.TabIndex = 0;
+            this.ChangePassword.Text = "Change Password";
+            this.ChangePassword.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ChangePassword.UseVisualStyleBackColor = true;
+            this.ChangePassword.Click += new System.EventHandler(this.ChangePassword_Click);
             // 
-            // button2
+            // LogOut
             // 
-            this.button2.Location = new System.Drawing.Point(713, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Log out";
-            this.button2.UseVisualStyleBackColor = true;
+            this.LogOut.Location = new System.Drawing.Point(348, 12);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(75, 23);
+            this.LogOut.TabIndex = 1;
+            this.LogOut.Text = "Log out";
+            this.LogOut.UseVisualStyleBackColor = true;
+            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             // 
             // loginHistory
             // 
             this.loginHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.loginHistory.Location = new System.Drawing.Point(12, 53);
             this.loginHistory.Name = "loginHistory";
-            this.loginHistory.Size = new System.Drawing.Size(776, 385);
+            this.loginHistory.Size = new System.Drawing.Size(331, 267);
             this.loginHistory.TabIndex = 2;
+            this.loginHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loginHistory_CellContentClick);
             // 
             // label1
             // 
@@ -71,17 +74,19 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Login History";
             // 
-            // mainPage
+            // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(427, 330);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginHistory);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "mainPage";
+            this.Controls.Add(this.LogOut);
+            this.Controls.Add(this.ChangePassword);
+            this.Name = "MainPage";
             this.Text = "Main Page";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainPage_FormClosing);
+            this.Load += new System.EventHandler(this.MainPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.loginHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -90,8 +95,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ChangePassword;
+        private System.Windows.Forms.Button LogOut;
         private System.Windows.Forms.DataGridView loginHistory;
         private System.Windows.Forms.Label label1;
     }
